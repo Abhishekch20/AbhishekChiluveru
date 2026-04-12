@@ -1,105 +1,129 @@
 import { motion } from "framer-motion"
-import { RiReactjsLine } from "react-icons/ri"
-import { FaFigma, FaNodeJs } from "react-icons/fa";
-import { SiMysql } from "react-icons/si";
-import { SiMongodb } from "react-icons/si";
-import { FaHtml5 } from "react-icons/fa6";
-import { FaCss3Alt } from "react-icons/fa";
-import { FaJsSquare } from "react-icons/fa";
-import { FaBootstrap } from "react-icons/fa";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { SiExpress } from "react-icons/si";
-import { FaPython } from "react-icons/fa";
-import { SiTensorflow } from "react-icons/si";
-import { SiGooglecolab } from "react-icons/si";
-import { SiJupyter } from "react-icons/si";
-import { SiScikitlearn } from "react-icons/si";
-import { FaGitAlt } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { IoLogoFigma, IoLogoWordpress } from "react-icons/io5";
-import { VscVscode } from "react-icons/vsc";
+import { RiReactjsLine, RiTailwindCssFill } from "react-icons/ri"
+import { FaNodeJs, FaCss3Alt, FaJsSquare, FaBootstrap, FaPython, FaGitAlt, FaGithub } from "react-icons/fa"
+import { FaHtml5 } from "react-icons/fa6"
+import { SiMysql, SiMongodb, SiExpress, SiTensorflow, SiGooglecolab, SiJupyter, SiScikitlearn, SiShopify } from "react-icons/si"
+import { IoLogoFigma, IoLogoWordpress } from "react-icons/io5"
+import { VscVscode } from "react-icons/vsc"
+
+const technologyGroups = [
+    {
+        title: "Frontend",
+        description: "Interfaces, layouts, and responsive user experiences.",
+        items: [
+            { label: "React.js", icon: RiReactjsLine, color: "text-cyan-400" },
+            { label: "HTML", icon: FaHtml5, color: "text-orange-500" },
+            { label: "CSS", icon: FaCss3Alt, color: "text-blue-500" },
+            { label: "JavaScript", icon: FaJsSquare, color: "text-yellow-400" },
+            { label: "Bootstrap", icon: FaBootstrap, color: "text-violet-500" },
+            { label: "Tailwind CSS", icon: RiTailwindCssFill, color: "text-cyan-400" },
+        ],
+    },
+    {
+        title: "Backend",
+        description: "APIs, server logic, and database-backed applications.",
+        items: [
+            { label: "Node.js", icon: FaNodeJs, color: "text-green-500" },
+            { label: "Express.js", icon: SiExpress, color: "text-white" },
+            { label: "MySQL", icon: SiMysql, color: "text-yellow-400" },
+            { label: "MongoDB", icon: SiMongodb, color: "text-green-500" },
+        ],
+    },
+    {
+        title: "Machine Learning",
+        description: "Data workflows, model building, and intelligent systems.",
+        items: [
+            { label: "Python", icon: FaPython, color: "text-amber-300" },
+            { label: "TensorFlow", icon: SiTensorflow, color: "text-orange-400" },
+            { label: "Google Colab", icon: SiGooglecolab, color: "text-orange-500" },
+            { label: "Jupyter", icon: SiJupyter, color: "text-orange-600" },
+            { label: "Scikit-Learn", icon: SiScikitlearn, color: "text-cyan-500" },
+        ],
+    },
+    {
+        title: "Tools & Platforms",
+        description: "CMS, eCommerce, design, and developer workflow tools.",
+        items: [
+            { label: "Git", icon: FaGitAlt, color: "text-orange-500" },
+            { label: "GitHub", icon: FaGithub, color: "text-white" },
+            { label: "VS Code", icon: VscVscode, color: "text-blue-500" },
+            { label: "Figma", icon: IoLogoFigma, color: "text-green-300" },
+            { label: "WordPress", icon: IoLogoWordpress, color: "text-sky-400" },
+            { label: "Shopify", icon: SiShopify, color: "text-green-500" },
+        ],
+    },
+]
+
 const Technologies = () => {
     return (
-        <div className="border-b border-neutral-800 ">
-            <motion.h1
-                whileInView={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: -100 }}
-                transition={{ duration: 0.5 }}
-                className="mt-10 mb-10 lg:mb-20  text-center text-4xl  bg-gradient-to-l from-pink-500  via-slate-500 to-purple-500 bg-clip-text text-transparent">Technologies</motion.h1>
-            <div className="flex flex-col items-center justify-center  text-white pb-40 lg:flex lg:flex-row lg:gap-8">
-                <motion.div whileInView={{ opacity: 1, x: 0 }}
-                    initial={{ opacity: 0, x: -100 }}
-                    transition={{ duration: 0.5 }} className="p-6 backdrop-blur-sm bg-white/10 rounded-lg lg:mt-10 max-w-xs mb-10 hover:bg-slate-800 cursor-pointer ">
-                    <h2 className="text-2xl font-bold text-center mb-4 bg-gradient-to-l from-pink-500  via-slate-500 to-purple-500 bg-clip-text text-transparent">Frontend</h2>
-                    <div className="grid grid-cols-2 w-60">
-                        <div className=" flex items-center justify-center border rounded border-neutral-400 h-12 w-28 mb-4"><RiReactjsLine className="mr-2 text-cyan-500" />
-                            React Js</div>
-                        <div className="flex items-center justify-center border rounded border-neutral-400 h-12 w-24 mb-4 ml-2"><FaHtml5 className="mr-2 text-orange-600" />
-                            HTML</div>
-                        <div className="flex items-center justify-center border rounded border-neutral-400 h-12 w-24 mb-4"><FaCss3Alt className="mr-2 text-blue-600" />
-                            CSS</div>
-                        <div className="flex items-center justify-center border rounded border-neutral-400 h-12 w-32 mr-20"><FaJsSquare className="mr-2 text-yellow-400" />
-                            JavaScript</div>
-                        <div className="flex items-center justify-center border rounded border-neutral-400 h-12 w-28 mb-4"><FaBootstrap className="mr-2 text-violet-600" />
-                            Bootstrap</div>
-                        <div className="flex items-center justify-center border rounded border-neutral-400 h-12 w-32 mb-4"><RiTailwindCssFill className="mr-2 text-cyan-500" />
-                            TailwindCSS</div>
-                    </div>
-                </motion.div>
+        <section className="relative overflow-hidden border-b border-neutral-900 px-6 py-20 md:px-12 lg:px-28">
+            <div className="absolute inset-x-0 top-0 -z-10 h-64 bg-[radial-gradient(circle_at_50%_0%,rgba(34,211,238,0.18),transparent_38%),radial-gradient(circle_at_70%_20%,rgba(168,85,247,0.18),transparent_32%)]" aria-hidden="true" />
+
+            <div className="mx-auto max-w-6xl">
                 <motion.div
-                    whileInView={{ opacity: 1, x: 0 }}
-                    initial={{ opacity: 0, x: -100 }}
-                    transition={{ duration: 0.5 }}
-                    className="p-6 backdrop-blur-sm bg-white/10 rounded-lg  max-w-xs mb-10 hover:bg-slate-800 cursor-pointer">
-                    <h2 className="text-2xl font-bold text-center mb-4 bg-gradient-to-l from-pink-500  via-slate-500 to-purple-500 bg-clip-text text-transparent">Backend</h2>
-                    <div className="grid grid-cols-2 w-60 ">
-                        <div className=" flex items-center justify-center border rounded border-neutral-400 h-12 w-24 mb-4"><FaNodeJs className="mr-2 text-green-500" />
-                            Node Js</div>
-                        <div className="flex items-center justify-center border rounded border-neutral-400 h-12 w-32 mb-4"><SiExpress className="mr-2" />Express Js</div>
-                        <div className="flex items-center justify-center border rounded border-neutral-400 h-12 w-26"><SiMysql className="mr-2 text-yellow-400" />
-                            MySQL</div>
-                        <div className="flex items-center justify-center border rounded border-neutral-400 h-12 w-28 ml-4 mb-4 "><SiMongodb className="mr-2 text-green-500" />
-                            MongoDB</div>
+                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: 36 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    className="mb-14 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between"
+                >
+                    <div>
+                        <p className="mb-3 text-xs font-black uppercase tracking-[0.4em] text-cyan-300">
+                            My Stack
+                        </p>
+                        <h1 className="text-3xl font-black uppercase tracking-[0.28em] text-white md:text-4xl">
+                            Technologies
+                        </h1>
                     </div>
+                    <p className="max-w-xl text-sm leading-7 text-neutral-400">
+                        A practical toolkit for building full-stack web apps, WordPress sites, data-driven workflows, and machine learning experiments.
+                    </p>
                 </motion.div>
-                <motion.div
-                    whileInView={{ opacity: 1, x: 0 }}
-                    initial={{ opacity: 0, x: 100 }}
-                    transition={{ duration: 0.5 }}
-                    className="p-6 backdrop-blur-sm bg-white/10 rounded-lg  max-w-xs mb-10 hover:bg-slate-800 cursor-pointer">
-                    <h2 className="text-2xl font-bold text-center mb-4 bg-gradient-to-l from-pink-500  via-slate-500 to-purple-500 bg-clip-text text-transparent">Machine Learning</h2>
-                    <div className="grid grid-cols-2 w-60 ">
-                        <div className=" flex items-center justify-center border rounded border-neutral-400 h-12 w-24 mb-4"><FaPython className="mr-2 text-orange-300" />
-                            Python</div>
-                        <div className="flex items-center justify-center border rounded border-neutral-400 h-12 mb-4"><SiTensorflow className="mr-2 text-orange-400" />Tensorflow</div>
-                        <div className="flex items-center justify-center border rounded border-neutral-400 h-12 w-32"><SiGooglecolab className="mr-2 text-orange-500" />
-                            GoogleColab</div>
-                        <div className="flex items-center justify-center border rounded border-neutral-400 h-12 w-24 ml-6"><SiJupyter className="mr-2 text-orange-600" />
-                            Jupyter</div>
-                        <div className="flex items-center justify-center border rounded border-neutral-400 h-12 w-32 mt-4 mb-4"><SiScikitlearn className="mr-2 text-cyan-600" />
-                            Scikit Learn</div>
-                    </div>
-                </motion.div>
-                <motion.div
-                    whileInView={{ opacity: 1, x: 0 }}
-                    initial={{ opacity: 0, x: 100 }}
-                    transition={{ duration: 0.5 }}
-                    className="p-6 backdrop-blur-sm bg-white/10 rounded-lg  max-w-xs mb-0 hover:bg-slate-800 cursor-pointer">
-                    <h2 className="text-2xl font-bold text-center mb-4 bg-gradient-to-l from-pink-500  via-slate-500 to-purple-500 bg-clip-text text-transparent">Others</h2>
-                    <div className="grid grid-cols-2 w-60 ">
-                        <div className=" flex items-center justify-center border rounded border-neutral-400 h-12 w-24 mb-4"><FaGitAlt className="mr-2 text-orange-500" />
-                            Git</div>
-                        <div className="flex items-center justify-center border rounded border-neutral-400 h-12 mb-4 w-32"><FaGithub className="mr-2" />GitHub</div>
-                        <div className="flex items-center justify-center border rounded border-neutral-400 h-12 w-30  "><VscVscode className="mr-2 text-blue-500" />
-                            VS Code</div>
-                        <div className="flex items-center justify-center border rounded border-neutral-400 h-12 ml-4 w-28 mb-4"><IoLogoFigma className="mr-2 text-green-300" />
-                            Figma</div>
-                            <div className="flex items-center justify-center border rounded border-neutral-400 h-12  w-32 mb-4"><IoLogoWordpress className="mr-2 text-green-300" />
-                            Wordpress</div>
-                    </div>
-                </motion.div>
+
+                <div className="grid gap-8 lg:grid-cols-2">
+                    {technologyGroups.map((group, index) => (
+                        <motion.div
+                            key={group.title}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, y: 36 }}
+                            transition={{ duration: 0.55, delay: index * 0.08 }}
+                            viewport={{ once: true, amount: 0.25 }}
+                            className="border-t border-white/15 pt-7"
+                        >
+                            <div className="mb-6 flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                                <div>
+                                    <h2 className="text-xl font-black uppercase tracking-[0.18em] text-white">
+                                        {group.title}
+                                    </h2>
+                                    <p className="mt-3 max-w-md text-sm leading-6 text-neutral-500">
+                                        {group.description}
+                                    </p>
+                                </div>
+                                <span className="text-sm font-black text-cyan-300">
+                                    0{index + 1}
+                                </span>
+                            </div>
+
+                            <div className="flex flex-wrap gap-3">
+                                {group.items.map((item) => {
+                                    const Icon = item.icon
+
+                                    return (
+                                        <div
+                                            key={item.label}
+                                            className="inline-flex items-center gap-2 rounded border border-white/15 bg-white/[0.03] px-4 py-3 text-sm font-semibold text-neutral-200 transition hover:border-cyan-300/70 hover:bg-cyan-300/10 hover:text-white"
+                                        >
+                                            <Icon className={item.color} size={18} />
+                                            {item.label}
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
             </div>
-        </div>
+        </section>
     )
 }
 

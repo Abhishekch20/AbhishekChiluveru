@@ -1,13 +1,19 @@
-import project1 from "../assets/project-1.jpg";
-import project2 from "../assets/project-2.jpg";
-import project3 from "../assets/project-3.jpg";
-import project4 from "../assets/project-4.jpg";
+import project1 from "../assets/project-1.png";
+import project2 from "../assets/project-2.png";
+import project3 from "../assets/project-3.png";
+import project4 from "../assets/project-4.png";
+import moongladeProject from "../assets/moonglade-project.png";
+import chitchatProject from "../assets/chitchat-project.png";
+import newnetProject from "../assets/newnet-project.png";
+import renewhouseProject from "../assets/renewhouse-project.svg";
 
-export const HERO_CONTENT = `Hi there, I am Abhishek I’m a dedicated full-stack web developer who specializes in building dynamic, user-friendly applications. With a passion for technology, I continuously seek to learn and apply machine learning techniques to create innovative solutions that address real-world challenges.`;
+export const HERO_CONTENT = `Hi, I'm Abhishek - a passionate Full-Stack and WordPress Developer, Data Analytics Enthusiast, and Machine Learning Learner focused on building efficient, scalable, and innovative digital solutions for the web and beyond.`;
 
-export const ABOUT_TEXT = `I am a passionate full-stack web developer with expertise in building dynamic and responsive web applications. Proficient in modern technologies such as React.js, Node.js, MongoDB, MySQL, and Express.js, I strive to create seamless user experiences while ensuring robust backend functionality.
+export const ABOUT_TEXT = `I'm a passionate Full-Stack and WordPress Developer, Data Analytics Enthusiast, and Machine Learning Learner dedicated to building efficient, scalable, and innovative solutions. I enjoy working across the full development process, from crafting responsive user interfaces to building reliable backend systems and database-driven applications.
 
-In addition to my web development skills, I have a strong interest in machine learning technologies. I have experience with Python, TensorFlow, Google Colab, Jupyter, and Scikit-Learn, which allows me to integrate intelligent features into my applications. My goal is to leverage both web development and machine learning to build innovative solutions that meet real-world challenges.`;
+I have hands-on experience with React.js, Node.js, Express.js, MongoDB, MySQL, and WordPress, which enables me to develop dynamic web applications, custom websites, and practical digital products. I focus on writing clean, maintainable code and creating user-friendly experiences that solve real problems.
+
+Alongside web development, I'm building strong skills in Data Analytics and Machine Learning. I use data to understand patterns, support better decisions, and explore intelligent systems that combine analytics with modern web technologies.`;
 
 export const EXPERIENCES = [
   {
@@ -42,32 +48,77 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
-    title: "E-Commerce Website",
-    image: project1,
+    title: "NewNet Secure Transactions - WordPress Website (Freelance Project)",
+    image: newnetProject,
+    status: "On Going",
     description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
+      "Migrated NewNet Secure Transactions' client website from Duda to WordPress, redesigned the UI/UX with a modern responsive layout, rebuilt pages with Elementor, and optimized performance through image compression, asset handling, and cross-browser testing.",
+    technologies: ["WordPress", "Elementor", "UI/UX", "Responsive Design", "Performance Optimization"],
+    github: "https://",
+    website: "https://newnet.com",
   },
   {
-    title: "Task Management App",
+    title: "Moonglade - Creative Agency Website (Freelance Project)",
+    image: moongladeProject,
+    description:
+      "Built Moonglade, a responsive agency-style website with animated page transitions, reusable UI components, modern routing, and an interactive visual experience optimized for a polished brand presence.",
+    technologies: ["TypeScript", "React.js", "Vite", "Tailwind CSS", "Three.js", "Framer Motion"],
+    github: "https://github.com/Abhishekch20/moonglade",
+    website: "https://moongladeatelier.com",
+  },
+  {
+    title: "RenewHouse - Home Renovation WordPress Website",
+    image: renewhouseProject,
+    description:
+      "Designed and developed a full home renovation business website from scratch using WordPress and Elementor, with multi-section pages for hero, about, services, process, portfolio, testimonials, FAQs, and CTA-focused service pages.",
+    technologies: ["WordPress", "Elementor", "Responsive Design", "UI/UX", "Service Pages"],
+    github: "https://",
+    website: "https://",
+  },
+  {
+    title: "Urban Psychotic - Shopify eCommerce Store (Freelance Project)",
     image: project2,
     description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
+      "Developed Urban Psychotic, a fully functional Shopify eCommerce store with complete store setup, custom theme customization, product management, payment gateway integration, automated shipping setup, discount systems, and third-party app integrations. Ensured high-performance UI, smooth checkout flow, and conversion-optimized design tailored to the brand's aesthetic.",
+    technologies: ["Shopify", "Liquid", "JavaScript", "Shopify Admin", "Shopify App."],
+    github: "https://",
+    website: "https://urbanpsychotic.com",
   },
   {
-    title: "Portfolio Website",
+    title: "NexGen - Platform Connecting Developers & Customers",
+    image: project1,
+    description:
+      "Developed NexGen, a Next.js-based platform enabling custom website development services with user authentication, database integration, and a scalable content management workflow for clients and developers.",
+    technologies: ["Next.j", "Tailwind CSS", "React.js", "Node.js", "MongoDB"],
+    github: "https://github.com/Abhishekch20/NexGen-Connects-Developers-Customers ",
+    website: "https://nexxgenn.netlify.app/",
+  },
+  {
+    title: "Machine Learning-Based Sign Language Recognition",
     image: project3,
     description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
+      "Developed a real-time ASL fingerspelling recognition system using a CNN-based model, achieving 95.79% accuracy. The system converts hand gestures into text, enabling communication assistance for deaf and speech-impaired individuals.",
+    technologies: ["Python", "TensorFlow", "CNN", "NumPy", "OpenCV", "Google Colab", "Scikit-Learn"],
+    github: "https://github.com/Abhishekch20/SIGN-LANGUAGE-RECOGNITION",
+    website: "https://",
   },
   {
-    title: "Blogging Platform",
+    title: "Fuel Type Classification",
     image: project4,
     description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
+      "Created a machine learning model to classify vehicle fuel types using Telangana Vehicle Sales 2023 dataset. Achieved 99% accuracy with Random Forest, outperforming traditional models such as KNN.",
+    technologies: ["Python", "Scikit-Learn", "Pandas", "NumPy", "Random Forest", "Data Preprocessing"],
+    github: " https://github.com/Abhishekch20/FUEL-TYPE-CLASSIFICATION ",
+    website: "https://",
+  },
+  {
+    title: "Chit-Chat - Real-Time Chat Application",
+    image: chitchatProject,
+    description:
+      "Developed Chit-Chat, a real-time chat application using Socket.io with instant messaging, group rooms through unique room IDs, and a simple responsive interface for session-based conversations.",
+    technologies: ["HTML", "CSS", "JavaScript", "Node.js", "Socket.io"],
+    github: "https://github.com/Abhishekch20/CHIT-CHAT-Chat-Application-",
+    website: "https://chit-chat-5e9g.onrender.com/",
   },
 ];
 
@@ -75,4 +126,3 @@ export const CONTACT = {
   phoneNo: "+91 9398379060",
   email: "abhishekchiluveru2004@gmail.com",
 };
-

@@ -1,0 +1,24 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" fill="#F6F3EC"/>
+  <rect x="82" y="74" width="1036" height="572" rx="26" fill="#FFFDF8" stroke="#DDD4C5" stroke-width="2"/>
+  <rect x="128" y="118" width="944" height="86" rx="18" fill="#102522"/>
+  <text x="166" y="171" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="28" font-weight="700">NewNet Secure Transactions</text>
+  <circle cx="997" cy="160" r="13" fill="#0DB779"/>
+  <circle cx="1037" cy="160" r="13" fill="#E0A33B"/>
+  <rect x="128" y="246" width="356" height="302" rx="20" fill="#F1EADF" stroke="#D8CEBF"/>
+  <text x="166" y="306" fill="#102522" font-family="Arial, sans-serif" font-size="42" font-weight="800">WordPress</text>
+  <text x="166" y="358" fill="#102522" font-family="Arial, sans-serif" font-size="42" font-weight="800">Website</text>
+  <text x="166" y="414" fill="#6B6256" font-family="Arial, sans-serif" font-size="22">Redesign and rebuild for a</text>
+  <text x="166" y="448" fill="#6B6256" font-family="Arial, sans-serif" font-size="22">secure transaction brand.</text>
+  <rect x="166" y="486" width="184" height="48" rx="8" fill="#102522"/>
+  <text x="258" y="517" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle">Elementor Build</text>
+  <rect x="540" y="246" width="532" height="64" rx="12" fill="#FFFFFF" stroke="#D8CEBF"/>
+  <rect x="572" y="269" width="234" height="18" rx="9" fill="#0DB779"/>
+  <rect x="540" y="338" width="532" height="64" rx="12" fill="#FFFFFF" stroke="#D8CEBF"/>
+  <rect x="572" y="361" width="388" height="18" rx="9" fill="#102522" opacity="0.22"/>
+  <rect x="540" y="430" width="532" height="64" rx="12" fill="#FFFFFF" stroke="#D8CEBF"/>
+  <rect x="572" y="453" width="302" height="18" rx="9" fill="#102522" opacity="0.22"/>
+  <rect x="540" y="522" width="532" height="64" rx="12" fill="#FFFFFF" stroke="#D8CEBF"/>
+  <rect x="572" y="545" width="430" height="18" rx="9" fill="#102522" opacity="0.22"/>
+  <path d="M902 122L916 150L947 155L925 177L930 208L902 194L874 208L879 177L857 155L888 150L902 122Z" fill="#0DB779" opacity="0.75"/>
+</svg>

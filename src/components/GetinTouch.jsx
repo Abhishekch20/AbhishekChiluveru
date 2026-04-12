@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 
 const GetinTouch = () => {
   return (
-    <div className="border-b  border-neutral-900 ">
+    <div className="pb-12">
       <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
@@ -18,7 +18,6 @@ const GetinTouch = () => {
         <a
           href="mailto:abhishekchiluveru2004@gmail.com" className="border-b">{CONTACT.email}</a>
       </div>
-      <h1 className="text-center mt-6">Copyright  Abhishek's Portfolio | All rights reserved</h1>
     </div>
   )
 }

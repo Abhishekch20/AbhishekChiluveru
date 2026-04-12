@@ -1,5 +1,4 @@
-import emailjs from 'emailjs-com';
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import { motion } from "framer-motion"
 
 const Contact = () => {
@@ -7,86 +6,150 @@ const Contact = () => {
         name: '',
         email: '',
         message: '',
-    });
-    const [statusMessage, setStatusMessage] = useState('');
-    const [loading, setLoading] = useState(false);
+    })
+    const [statusMessage, setStatusMessage] = useState('')
+    const [loading, setLoading] = useState(false)
 
     const handleChange = (e) => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value,
-        });
-    };
+        })
+    }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setLoading(true); // Show loading state when email is sending
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        setLoading(true)
 
-        // Replace with your actual EmailJS credentials
-        const serviceId = 'service_i35zp4t';
-        const templateId = 'template_hviaqdk';
-        const publicKey = 'zT4x7ia2x26Z_n1fX'; // Use Public Key (API Key) instead of User ID 
-
-        const templateParams = {
-            name: formData.name,  // Ensure this matches the placeholder in the template
-            email: formData.email,  // Ensure this matches the placeholder in the template
-            message: formData.message  // This should match too
-        };
-        // Logging form data for debugging
-        console.log('Form Data:', formData);
-
-        emailjs.send(serviceId, templateId, formData, publicKey)
-            .then((response) => {
-                console.log('SUCCESS!', response.status, response.text); // For debugging
-                setStatusMessage('Message sent successfully!');
-                setFormData({ name: '', email: '', message: '' }); // Reset form after success
+        try {
+            const response = await fetch("https://formsubmit.co/ajax/abhishekchiluveru1@gmail.com", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify({
+                    ...formData,
+                    _subject: "New portfolio contact form message",
+                    _template: "table",
+                }),
             })
-            .catch((error) => {
-                console.error('FAILED...', error); // Capture error details
-                setStatusMessage('Failed to send the message. Please try again.');
-            })
-            .finally(() => {
-                setLoading(false); // End loading state
-            });
-    };
+
+            if (!response.ok) {
+                throw new Error("FormSubmit request failed")
+            }
+
+            setStatusMessage('Message sent successfully!')
+            setFormData({ name: '', email: '', message: '' })
+        } catch (error) {
+            console.error('FAILED...', error)
+            setStatusMessage('Failed to send the message. Please try again.')
+        } finally {
+            setLoading(false)
+        }
+    }
+
     return (
-        <div className="border-b  border-neutral-900 pb-20">
-            <motion.h1
-                whileInView={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: -100 }}
-                transition={{ duration: 1 }}
-                className="my-10 text-center text-4xl bg-gradient-to-l from-pink-500  via-slate-500 to-purple-500 bg-clip-text text-transparent">Contact Me</motion.h1>
-            <motion.h2
-                whileInView={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: -100 }}
-                transition={{ duration: 0.5 }}
-                className="my-10 text-center text-xl">Feel free to reach out to me for any questions or opportunities!</motion.h2>
-            <motion.div
-                whileInView={{ opacity: 1, x: 0 }}
-                initial={{ opacity: 0, x: -100 }}
-                transition={{ duration: 0.5 }}
-                className=" flex flex-col items-center bg- py-6 mx-8 lg:mx-96">
-                <form onSubmit={handleSubmit} className=" flex flex-col items-center bg- py-6 mx-8 lg:py-10 lg:mx-96">
-                    <label className="mx-24 mt-3" htmlFor="email" >Email</label>
-                    <input className="bg-transparent outline-none h-10 w-60  mx-24  lg:w-80 lg:h-12 rounded-lg " type="email" name="email" value={formData.email}
-                        onChange={handleChange}
-                        required placeholder="Your Email" id="email" />
-                    <hr className="w-60 mb-2 lg:w-80" />
-                    <label className="mx-24 mt-3" htmlFor="name" >Name</label>
-                    <input className=" bg-transparent outline-none h-10 w-60 mx-24  lg:w-80 lg:h-12 rounded-lg" type="text" name="name" value={formData.name}
-                        onChange={handleChange}
-                        required placeholder="Your Name" id="name" />
-                    <hr className="w-60 mb-2 lg:w-80" />
-                    <label className="mx-24 mt-3" htmlFor="message" >Query</label>
-                    <input className=" bg-transparent outline-none h-10 w-60 mx-24  lg:w-80 lg:h-12 " name="message" value={formData.message}
-                        onChange={handleChange}
-                        required placeholder="Your query" id="message" />
-                    <hr className="w-60 mb-2 lg:w-80" />
-                    <button type="submit" disabled={loading} className=" mt-3 bg-neutral-900 w-8/12 py-3 text-md font-medium text-purple-500 lg:px-8 lg:py-4 lg:w-80 lg:mt-6 rounded-xl hover:bg-purple-500 hover:text-white">{loading ? 'Sending...' : 'Send Message'}</button>
-                </form>
-                {statusMessage && <p>{statusMessage}</p>}
-            </motion.div>
-        </div>
+        <section id="contact" className="relative overflow-hidden scroll-mt-28 border-b border-neutral-900 px-6 py-20 md:px-12 lg:px-28">
+            <div className="absolute inset-x-0 top-0 -z-10 h-72 bg-[radial-gradient(circle_at_25%_10%,rgba(34,211,238,0.14),transparent_34%),radial-gradient(circle_at_86%_18%,rgba(168,85,247,0.16),transparent_32%)]" aria-hidden="true" />
+
+            <div className="mx-auto max-w-6xl">
+                <motion.div
+                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: 36 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    className="mb-14 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between"
+                >
+                    <div>
+                        <p className="mb-3 text-xs font-black uppercase tracking-[0.4em] text-cyan-300">
+                            Contact
+                        </p>
+                        <h1 className="text-3xl font-black uppercase tracking-[0.28em] text-white md:text-4xl">
+                            Let&apos;s Talk
+                        </h1>
+                    </div>
+                    <p className="max-w-xl text-sm leading-7 text-neutral-400">
+                        Send a project idea, freelance inquiry, or collaboration note. I&apos;ll get back to you soon.
+                    </p>
+                </motion.div>
+
+                <motion.form
+                    onSubmit={handleSubmit}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: 36 }}
+                    transition={{ duration: 0.55 }}
+                    viewport={{ once: true, amount: 0.25 }}
+                    className="grid gap-8 border-t border-white/15 pt-8 lg:grid-cols-2"
+                >
+                    <div className="border-b border-white/20 pb-4">
+                        <label className="block text-xs font-black uppercase tracking-[0.3em] text-neutral-500" htmlFor="name">
+                            Name
+                        </label>
+                        <input
+                            className="mt-4 w-full bg-transparent text-base text-white outline-none placeholder:text-neutral-700"
+                            type="text"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleChange}
+                            required
+                            id="name"
+                            aria-label="Name"
+                            placeholder="Your name"
+                        />
+                    </div>
+
+                    <div className="border-b border-white/20 pb-4">
+                        <label className="block text-xs font-black uppercase tracking-[0.3em] text-neutral-500" htmlFor="email">
+                            Email
+                        </label>
+                        <input
+                            className="mt-4 w-full bg-transparent text-base text-white outline-none placeholder:text-neutral-700"
+                            type="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                            id="email"
+                            aria-label="Email"
+                            placeholder="you@example.com"
+                        />
+                    </div>
+
+                    <div className="border-b border-white/20 pb-4 lg:col-span-2">
+                        <label className="block text-xs font-black uppercase tracking-[0.3em] text-neutral-500" htmlFor="message">
+                            Query
+                        </label>
+                        <textarea
+                            className="mt-4 min-h-32 w-full resize-none bg-transparent text-base leading-7 text-white outline-none placeholder:text-neutral-700"
+                            name="message"
+                            value={formData.message}
+                            onChange={handleChange}
+                            required
+                            id="message"
+                            aria-label="Query"
+                            placeholder="Tell me what you want to build"
+                        />
+                    </div>
+
+                    <div className="flex flex-col gap-5 sm:flex-row sm:items-center lg:col-span-2">
+                        <button
+                            type="submit"
+                            disabled={loading}
+                            className="w-fit rounded border border-cyan-300/70 px-8 py-4 text-sm font-black uppercase tracking-[0.22em] text-white transition hover:border-cyan-200 hover:bg-cyan-300 hover:text-neutral-950 disabled:cursor-not-allowed disabled:opacity-60"
+                        >
+                            {loading ? 'Sending' : 'Send'}
+                        </button>
+
+                        {statusMessage && (
+                            <p className="text-sm font-semibold text-neutral-400">
+                                {statusMessage}
+                            </p>
+                        )}
+                    </div>
+                </motion.form>
+            </div>
+        </section>
     )
 }
 

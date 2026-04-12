@@ -1,0 +1,18 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" fill="#10100E"/>
+  <rect x="118" y="80" width="964" height="560" rx="10" fill="#10100E" stroke="#FFFFE3" stroke-width="3"/>
+  <path d="M170 173H214V154C214 126 192 108 155 108C117 108 92 131 92 168C92 205 117 228 155 228C192 228 214 210 214 182V170H174V182C174 191 169 196 155 196C137 196 131 189 131 168C131 147 137 140 155 140C169 140 174 145 174 154V173Z" fill="none" stroke="#FFFFE3" stroke-width="6"/>
+  <path d="M248 224V112H288V151H336V112H376V224H336V184H288V224H248Z" fill="none" stroke="#FFFFE3" stroke-width="6"/>
+  <path d="M417 224V112H457V224H417Z" fill="none" stroke="#FFFFE3" stroke-width="6"/>
+  <path d="M500 224V146H461V112H578V146H539V224H500Z" fill="none" stroke="#FFFFE3" stroke-width="6"/>
+  <path d="M620 186H720V160H620V186Z" fill="none" stroke="#FFFFE3" stroke-width="6"/>
+  <path d="M815 173H859V154C859 126 837 108 800 108C762 108 737 131 737 168C737 205 762 228 800 228C837 228 859 210 859 182V170H819V182C819 191 814 196 800 196C782 196 776 189 776 168C776 147 782 140 800 140C814 140 819 145 819 154V173Z" fill="none" stroke="#FFFFE3" stroke-width="6"/>
+  <path d="M892 224V112H932V151H980V112H1020V224H980V184H932V224H892Z" fill="none" stroke="#FFFFE3" stroke-width="6"/>
+  <rect x="210" y="312" width="780" height="70" rx="6" fill="none" stroke="#30302B" stroke-width="3"/>
+  <text x="252" y="355" fill="#8F8F83" font-family="Arial, sans-serif" font-size="28">Enter room code or create a room</text>
+  <rect x="210" y="420" width="780" height="70" rx="6" fill="none" stroke="#30302B" stroke-width="3"/>
+  <text x="252" y="463" fill="#8F8F83" font-family="Arial, sans-serif" font-size="28">Enter your username</text>
+  <rect x="350" y="528" width="500" height="74" rx="4" fill="none" stroke="#30302B" stroke-width="3"/>
+  <text x="600" y="574" fill="#FFFFE3" font-family="Arial, sans-serif" font-size="30" font-weight="700" text-anchor="middle">Join Chat</text>
+  <text x="600" y="657" fill="#FFFFE3" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">Copy the room code and send it to your friends before entering a room</text>
+</svg>
