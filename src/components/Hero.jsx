@@ -1,7 +1,7 @@
 import { HERO_CONTENT } from "../constants"
 import { motion } from "framer-motion"
 import { FaDownload } from "react-icons/fa"
-import resumeFile from "../assets/Abhishek_Chiluveru_Resume_.pdf"
+import resumeFile from "../assets/Abhishek_Chiluveru.Resume.pdf"
 
 const container = (delay) => ({
     hidden: { y: 30, opacity: 0 },
