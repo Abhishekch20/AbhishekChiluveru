@@ -3,9 +3,9 @@ import { motion } from "framer-motion"
 
 const aboutHighlights = [
     "Full-Stack Development",
+    "Shopify Builds",
     "WordPress Builds",
-    "Data Analytics",
-    "Machine Learning",
+    "WooCommerce Stores",
 ]
 
 const aboutParagraphs = ABOUT_TEXT.split("\n\n")
@@ -50,10 +50,10 @@ const About = () => {
                     className="mb-14 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between"
                 >
                     <div>
-                        <p className="mb-3 text-xs font-black uppercase tracking-[0.4em] text-cyan-300">
+                        <p className="mb-3 text-xs font-black uppercase tracking-[0.14em] text-cyan-300">
                             Profile
                         </p>
-                        <h1 className="text-3xl font-black uppercase tracking-[0.28em] text-white md:text-4xl">
+                        <h1 className="text-3xl font-black uppercase tracking-[0.06em] text-white md:text-4xl">
                             About Me
                         </h1>
                     </div>
@@ -70,7 +70,7 @@ const About = () => {
                         viewport={{ once: true, amount: 0.25 }}
                         className="border-t border-white/15 pt-7"
                     >
-                        <h2 className="text-xl font-black uppercase tracking-[0.18em] text-white">
+                        <h2 className="text-xl font-black uppercase tracking-[0.06em] text-white">
                             Focus Areas
                         </h2>
                         <div className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
@@ -93,7 +93,7 @@ const About = () => {
                         viewport={{ once: true, amount: 0.25 }}
                         className="border-t border-white/15 pt-7"
                     >
-                        <h2 className="text-xl font-black uppercase tracking-[0.18em] text-white">
+                        <h2 className="text-xl font-black uppercase tracking-[0.06em] text-white">
                             What I Do
                         </h2>
                         <div className="mt-6 space-y-6 text-base leading-8 text-neutral-400">

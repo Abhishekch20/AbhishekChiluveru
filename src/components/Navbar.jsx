@@ -10,6 +10,7 @@ import { FaXmark } from "react-icons/fa6"
 const navLinks = [
     { label: "Home", href: "#home" },
     { label: "About", href: "#about" },
+    { label: "Services", href: "#services" },
     { label: "Projects", href: "#projects" },
     { label: "Contact", href: "#contact" },
 ]
@@ -58,7 +59,7 @@ const Navbar = () => {
                     <span className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/40 bg-white/5 text-base font-bold tracking-tight text-white">
                         AC
                     </span>
-                    <span className="text-sm font-semibold uppercase tracking-[0.35em] text-neutral-300">
+                    <span className="text-sm font-semibold uppercase tracking-[0.08em] text-neutral-300">
                         Abhishek
                     </span>
                 </a>

@@ -62,10 +62,10 @@ const Contact = () => {
                     className="mb-14 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between"
                 >
                     <div>
-                        <p className="mb-3 text-xs font-black uppercase tracking-[0.4em] text-cyan-300">
+                        <p className="mb-3 text-xs font-black uppercase tracking-[0.14em] text-cyan-300">
                             Contact
                         </p>
-                        <h1 className="text-3xl font-black uppercase tracking-[0.28em] text-white md:text-4xl">
+                        <h1 className="text-3xl font-black uppercase tracking-[0.06em] text-white md:text-4xl">
                             Let&apos;s Talk
                         </h1>
                     </div>
@@ -83,7 +83,7 @@ const Contact = () => {
                     className="grid gap-8 border-t border-white/15 pt-8 lg:grid-cols-2"
                 >
                     <div className="border-b border-white/20 pb-4">
-                        <label className="block text-xs font-black uppercase tracking-[0.3em] text-neutral-500" htmlFor="name">
+                        <label className="block text-xs font-black uppercase tracking-[0.08em] text-neutral-500" htmlFor="name">
                             Name
                         </label>
                         <input
@@ -100,7 +100,7 @@ const Contact = () => {
                     </div>
 
                     <div className="border-b border-white/20 pb-4">
-                        <label className="block text-xs font-black uppercase tracking-[0.3em] text-neutral-500" htmlFor="email">
+                        <label className="block text-xs font-black uppercase tracking-[0.08em] text-neutral-500" htmlFor="email">
                             Email
                         </label>
                         <input
@@ -117,7 +117,7 @@ const Contact = () => {
                     </div>
 
                     <div className="border-b border-white/20 pb-4 lg:col-span-2">
-                        <label className="block text-xs font-black uppercase tracking-[0.3em] text-neutral-500" htmlFor="message">
+                        <label className="block text-xs font-black uppercase tracking-[0.08em] text-neutral-500" htmlFor="message">
                             Query
                         </label>
                         <textarea
@@ -136,7 +136,7 @@ const Contact = () => {
                         <button
                             type="submit"
                             disabled={loading}
-                            className="w-fit rounded border border-cyan-300/70 px-8 py-4 text-sm font-black uppercase tracking-[0.22em] text-white transition hover:border-cyan-200 hover:bg-cyan-300 hover:text-neutral-950 disabled:cursor-not-allowed disabled:opacity-60"
+                            className="w-fit rounded border border-cyan-300/70 px-8 py-4 text-sm font-black uppercase tracking-[0.08em] text-white transition hover:border-cyan-200 hover:bg-cyan-300 hover:text-neutral-950 disabled:cursor-not-allowed disabled:opacity-60"
                         >
                             {loading ? 'Sending' : 'Send'}
                         </button>

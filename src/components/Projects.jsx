@@ -2,9 +2,17 @@ import { useState } from "react";
 import { PROJECTS } from "../constants";
 import { motion } from "framer-motion";
 
+const projectCategories = [
+    { label: "All", value: "all" },
+    { label: "Shopify", value: "shopify" },
+    { label: "WordPress WooCommerce", value: "wordpress" },
+    { label: "Fullstack Web Dev", value: "fullstack" },
+    { label: "ML", value: "ml" },
+];
+
 const Projects = () => {
-    const [showAllProjects, setShowAllProjects] = useState(false);
-    const priorityProjects = ["NewNet", "Moonglade", "RenewHouse", "Urban Psychotic"];
+    const [activeCategory, setActiveCategory] = useState("all");
+    const priorityProjects = ["Vellanki Foods", "Monrow", "Velza", "CCTV Bihar", "Medstown", "NewNet", "Moonglade", "RenewHouse", "Urban Psychotic"];
     const orderedProjects = [...PROJECTS].sort((firstProject, secondProject) => {
         const firstIndex = priorityProjects.findIndex((title) => firstProject.title.includes(title));
         const secondIndex = priorityProjects.findIndex((title) => secondProject.title.includes(title));
@@ -15,7 +23,14 @@ const Projects = () => {
 
         return firstIndex - secondIndex;
     });
-    const visibleProjects = showAllProjects ? orderedProjects : orderedProjects.slice(0, 4);
+    const filteredProjects = activeCategory === "all"
+        ? orderedProjects
+        : orderedProjects.filter((project) => project.category === activeCategory);
+    const visibleProjects = filteredProjects;
+
+    const handleCategoryChange = (category) => {
+        setActiveCategory(category);
+    };
 
     return (
         <section id="projects" className="relative z-0 overflow-hidden scroll-mt-28 border-b border-neutral-900 px-6 py-20 md:px-12 lg:px-28">
@@ -30,10 +45,10 @@ const Projects = () => {
                     className="mb-14 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between"
                 >
                     <div>
-                        <p className="mb-3 text-xs font-black uppercase tracking-[0.4em] text-cyan-300">
+                        <p className="mb-3 text-xs font-black uppercase tracking-[0.14em] text-cyan-300">
                             Selected Work
                         </p>
-                        <h1 className="text-3xl font-black uppercase tracking-[0.28em] text-white md:text-4xl">
+                        <h1 className="text-3xl font-black uppercase tracking-[0.06em] text-white md:text-4xl">
                             Projects
                         </h1>
                     </div>
@@ -42,15 +57,30 @@ const Projects = () => {
                         <p className="max-w-xl text-sm leading-7 text-neutral-400">
                             A mix of full-stack apps, WordPress builds, Shopify work, and machine learning projects.
                         </p>
-                        <button
-                            type="button"
-                            onClick={() => setShowAllProjects((current) => !current)}
-                            className="hidden shrink-0 rounded border border-white/20 px-5 py-3 text-xs font-black uppercase tracking-[0.2em] text-white transition hover:border-cyan-300 hover:bg-cyan-300 hover:text-neutral-950 sm:block"
-                        >
-                            {showAllProjects ? "Less" : "More"} <span aria-hidden="true">-&gt;</span>
-                        </button>
                     </div>
                 </motion.div>
+
+                <div className="mb-12 flex flex-wrap gap-3">
+                    {projectCategories.map((category) => {
+                        const isActive = activeCategory === category.value;
+
+                        return (
+                            <button
+                                key={category.value}
+                                type="button"
+                                onClick={() => handleCategoryChange(category.value)}
+                                className={`rounded border px-4 py-3 text-xs font-black uppercase tracking-[0.08em] transition ${
+                                    isActive
+                                        ? "border-cyan-300 bg-cyan-300 text-neutral-950"
+                                        : "border-white/15 bg-white/[0.03] text-neutral-300 hover:border-cyan-300 hover:text-white"
+                                }`}
+                                aria-pressed={isActive}
+                            >
+                                {category.label}
+                            </button>
+                        );
+                    })}
+                </div>
 
             <div className="grid gap-8 lg:grid-cols-2">
                 {visibleProjects.map((project, index) => {
@@ -81,11 +111,11 @@ const Projects = () => {
                             <div className="mt-6 flex items-start justify-between gap-5">
                                 <div className="flex-1">
                                     <div className="flex flex-wrap items-center gap-3">
-                                        <h2 className="text-xl font-black uppercase tracking-[0.08em] text-white">
+                                        <h2 className="text-xl font-black uppercase tracking-[0.03em] text-white">
                                             {project.title}
                                         </h2>
                                         {project.status && (
-                                            <span className="rounded-full border border-emerald-300/40 bg-emerald-400/10 px-3 py-1 text-[0.65rem] font-black uppercase tracking-[0.22em] text-emerald-300">
+                                            <span className="rounded-full border border-emerald-300/40 bg-emerald-400/10 px-3 py-1 text-[0.65rem] font-black uppercase tracking-[0.08em] text-emerald-300">
                                                 {project.status}
                                             </span>
                                         )}
@@ -116,7 +146,7 @@ const Projects = () => {
                                     href={projectLink}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 rounded border border-cyan-300/70 px-5 py-3 text-xs font-black uppercase tracking-[0.16em] text-white transition hover:border-cyan-200 hover:bg-cyan-300 hover:text-neutral-950"
+                                    className="inline-flex items-center gap-2 rounded border border-cyan-300/70 px-5 py-3 text-xs font-black uppercase tracking-[0.08em] text-white transition hover:border-cyan-200 hover:bg-cyan-300 hover:text-neutral-950"
                                 >
                                     Live Site <span aria-hidden="true">-&gt;</span>
                                 </a>
@@ -126,15 +156,6 @@ const Projects = () => {
                 })}
             </div>
 
-            {orderedProjects.length > 4 && (
-                <button
-                    type="button"
-                    onClick={() => setShowAllProjects((current) => !current)}
-                    className="mx-auto mt-14 flex rounded border border-white/20 px-8 py-4 text-sm font-black uppercase tracking-[0.2em] text-white transition hover:border-cyan-300 hover:bg-cyan-300 hover:text-neutral-950 sm:hidden"
-                >
-                    {showAllProjects ? "Show Less" : "Show More"}
-                </button>
-            )}
             </div>
         </section>
     );

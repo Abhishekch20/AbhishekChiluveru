@@ -30,7 +30,6 @@ const Hero = () => {
                 >
                     <h1
                         className="mx-auto flex max-w-full flex-wrap items-center justify-center gap-x-2 text-[clamp(1.8rem,5vw,4.5rem)] uppercase leading-[1.15] sm:gap-x-3"
-                        style={{ fontFamily: '"Press Start 2P", cursive', fontWeight: 400 }}
                     >
                         <span
                             className="text-transparent"
@@ -56,9 +55,9 @@ const Hero = () => {
                         variants={container(0.4)}
                         initial="hidden"
                         animate="visible"
-                        className="mx-auto mt-7 max-w-4xl text-xs font-medium uppercase tracking-[0.28em] text-neutral-500 sm:text-base lg:text-xl"
+                        className="mx-auto mt-7 max-w-4xl text-xs font-medium uppercase tracking-[0.08em] text-neutral-500 sm:text-base lg:text-xl"
                     >
-                        Full-Stack & WordPress Developer
+                        Shopify, WordPress & Full-Stack Developer
                     </motion.h2>
 
                     <motion.p

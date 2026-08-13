@@ -48,7 +48,7 @@ const Footer = () => {
 
                 {footerColumns.map((column) => (
                     <div key={column.title}>
-                        <h2 className="mb-5 text-sm font-bold uppercase tracking-[0.18em] text-white">
+                        <h2 className="mb-5 text-sm font-bold uppercase tracking-[0.08em] text-white">
                             {column.title}
                         </h2>
                         <div className="flex flex-col gap-4 text-neutral-300">
@@ -70,7 +70,7 @@ const Footer = () => {
 
             <div className="mt-16 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
                 <div>
-                    <p className="mb-5 text-xs font-semibold uppercase tracking-[0.45em] text-neutral-500">
+                    <p className="mb-5 text-xs font-semibold uppercase tracking-[0.1em] text-neutral-500">
                         Full-Stack & WordPress Developer
                     </p>
                     <h2 className="text-4xl font-black tracking-normal text-white sm:text-6xl lg:text-6xl">
@@ -78,7 +78,7 @@ const Footer = () => {
                     </h2>
                 </div>
 
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-neutral-500">
+                <p className="text-xs font-semibold uppercase tracking-[0.08em] text-neutral-500">
                     Copyright 2026 Abhishek. All rights reserved.
                 </p>
             </div>

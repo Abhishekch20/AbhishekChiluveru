@@ -68,10 +68,10 @@ const Technologies = () => {
                     className="mb-14 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between"
                 >
                     <div>
-                        <p className="mb-3 text-xs font-black uppercase tracking-[0.4em] text-cyan-300">
+                        <p className="mb-3 text-xs font-black uppercase tracking-[0.14em] text-cyan-300">
                             My Stack
                         </p>
-                        <h1 className="text-3xl font-black uppercase tracking-[0.28em] text-white md:text-4xl">
+                        <h1 className="text-3xl font-black uppercase tracking-[0.06em] text-white md:text-4xl">
                             Technologies
                         </h1>
                     </div>
@@ -92,7 +92,7 @@ const Technologies = () => {
                         >
                             <div className="mb-6 flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                                 <div>
-                                    <h2 className="text-xl font-black uppercase tracking-[0.18em] text-white">
+                                    <h2 className="text-xl font-black uppercase tracking-[0.06em] text-white">
                                         {group.title}
                                     </h2>
                                     <p className="mt-3 max-w-md text-sm leading-6 text-neutral-500">
